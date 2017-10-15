@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE	hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+			"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="io.cobrafw.javaweb.model.Category" table="Categories">
+		<id name="id" type="int">
+			<column name="Id" />
+			<generator class="identity" />
+		</id>
+		<property name="fatherId" type="int">
+			<column name="FatherId" />
+		</property>
+		<property name="name" type="string">
+			<column name="Name" />
+		</property>
+		<property name="sortNo" type="int">
+			<column name="SortNo" />
+		</property>
+		<set name="categories" table="Categories" inverse="true" lazy="false" fetch="join" order-by="sortNo">
+			<key>
+				<column name="FatherId" not-null="false" />
+			</key>
+			<one-to-many class="io.cobrafw.javaweb.model.Category" />
+		</set>
+		<many-to-one name ="category" column ="FatherId"  class="io.cobrafw.javaweb.model.Category"
+								not-null="false" insert="false" update="false" lazy="false" fetch="join"/>
+	</class>
+</hibernate-mapping>

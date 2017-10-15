@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>ListCategoryController</servlet-name>
+		<servlet-class>io.cobrafw.javaweb.controllers.ListCategoryController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddCategoryController</servlet-name>
+		<servlet-class>io.cobrafw.javaweb.controllers.AddCategoryController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EditCategoryController</servlet-name>
+		<servlet-class>io.cobrafw.javaweb.controllers.EditCategoryController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteCategoryController</servlet-name>
+		<servlet-class>io.cobrafw.javaweb.controllers.DeleteCategoryController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ListCategoryController</servlet-name>
+		<url-pattern>/list-categories</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddCategoryController</servlet-name>
+		<url-pattern>/add-category</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditCategoryController</servlet-name>
+		<url-pattern>/edit-category</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteCategoryController</servlet-name>
+		<url-pattern>/delete-category</url-pattern>
+	</servlet-mapping>
+</web-app>
