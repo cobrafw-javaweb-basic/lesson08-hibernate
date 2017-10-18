@@ -36,6 +36,14 @@
 								<a href="<c:url value="/delete-category?id=${category.id}" />">Delete</a>
 							</td>
 						</tr>
+						<c:forEach var="product" items="${category.products}">
+							<tr>
+								<td>${product.id}</td>
+								<td>- ${product.name}</td>
+								<td>	-
+								</td>
+							</tr>
+						</c:forEach>
 						<c:forEach var="subCategory" items="${category.categories}">
 							<tr>
 								<td>${subCategory.id}</td>

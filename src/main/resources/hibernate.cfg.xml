@@ -14,5 +14,6 @@
 		<property name="format_sql">true</property>
 
 		<mapping resource="hibernate/category.hbm.xml"></mapping>
+		<mapping resource="hibernate/product.hbm.xml"></mapping>
 	</session-factory>
 </hibernate-configuration>

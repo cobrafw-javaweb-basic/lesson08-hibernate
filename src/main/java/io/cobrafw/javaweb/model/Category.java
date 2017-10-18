@@ -44,6 +44,8 @@ public class Category implements java.io.Serializable {
 	/**  Set of sub categories */
 	private Set<Category> categories;
 
+	private Set<Product> products;
+
 	/**
 	 * Default Constructor
 	 */
@@ -133,5 +135,19 @@ public class Category implements java.io.Serializable {
 	 */
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+
+	/**
+	 * @return the product
+	 */
+	public Set<Product> getProducts() {
+		return this.products;
+	}
+
+	/**
+	 * @param product the product to set
+	 */
+	public void setProducts(Set<Product> products) {
+		this.products = products;
 	}
 }

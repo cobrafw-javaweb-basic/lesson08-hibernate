@@ -41,17 +41,21 @@ public class CategoryDao {
 	 */
 	public List<Category> getListCategories() {
 
+		System.out.println("====================Begin Select Category=====================");
+
 		// Open Hibernate session
 		this.openSession();
 
 		// Create Hibernate Query
-		Query<Category> query = this.session.createQuery("from Category where fatherId is null order by sortNo");
+		Query<Category> query = this.session.createQuery("from Category where fatherId = 1 order by sortNo");
 
 		// Execute Hibernate query and get list result
 		List<Category> categoryList = query.list();
 
 		// Close Hibernate session
-		this.closeSession();
+		//this.closeSession();
+
+		System.out.println("====================End Select Category=====================");
 
 		return categoryList;
 	}

@@ -24,5 +24,13 @@
 		</set>
 		<many-to-one name ="category" column ="FatherId"  class="io.cobrafw.javaweb.model.Category"
 								not-null="false" insert="false" update="false" lazy="false" fetch="join"/>
+
+		<set name="products" table="Products"
+					inverse="true" lazy="false" fetch="join" order-by="Id">
+			<key>
+				<column name="CategoryId" not-null="true" />
+			</key>
+			<one-to-many class="io.cobrafw.javaweb.model.Product" />
+		</set>
 	</class>
 </hibernate-mapping>
